@@ -1,4 +1,3 @@
-local ExtWinLib = (function()
 local HttpService = game:GetService("HttpService")
 local JSONEncode = HttpService.JSONEncode
 local JSONDecode = HttpService.JSONDecode
@@ -272,16 +271,3 @@ end
 coroutine.wrap(websocket_connection_handler)()
 
 return ExtWinLib
-end)()
-
-local window = ExtWinLib.new_window("index.html")
-local webContents = window{"webContents"}
-
-local a = ExtWinLib.remote_function(window, [[
-    console.log(...variables)
-]])
-
-wait(1)
-
-a("hi", "whats", "up")
-a("hi", "whats", "up", 2)
