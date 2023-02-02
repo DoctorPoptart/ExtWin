@@ -1,0 +1,9 @@
+{
+    "robloxLsp.diagnostics.globals": [
+        "syn",
+        "WebSocket",
+        "http",
+        "getgenv",
+        "ExtWinLib"
+    ]
+}
